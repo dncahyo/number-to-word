@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html ng-app="App">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Node/Angular App</title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="index-ctrl.js"></script>
+
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+		<form name="aForm" class="form-inline">
+		  <div class="form-group">
+		    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+		    <div class="input-group">
+		      <div class="input-group-addon">{{langview}}</div>
+		      <input type="number" name="input" class="form-control" id="exampleInputAmount" placeholder="Amount" min="0" ng-model="input">
+		      <div class="input-group-addon" ng-click="centInput = centInput ? false : true">
+		      	<span ng-hide="centInput">.{{cent}}</span>
+		      	<input ng-show="centInput" type="number" name="input" ng-model="cent"
+                 min="0" max="99" required>
+		      </div>
+		    </div>
+		  </div>
+		  <button type="submit" class="btn btn-primary" ng-click="submit(input,cent)" disable="!aForm.input.$valid">wordify</button>
+		  <button type="submit" class="btn btn-default" ng-click="changelang()">change lang</button>
+		</form>
+		<blockquote  ng-if="result">
+		  <p>{{result}}</p>
+		  <footer>{{and}}{{result2}}{{centview}}</footer>
+		</blockquote>
+	</div>
+
+</body>
+</html>

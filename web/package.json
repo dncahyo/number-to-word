@@ -1,0 +1,11 @@
+{
+  "name": "angularexpresstemplate",
+  "version": "0.0.0",
+  "description": "simple express angular template.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "numbertoword": "../numberToWord"
+  }
+}
