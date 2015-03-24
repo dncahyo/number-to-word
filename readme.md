@@ -6,7 +6,8 @@ A node module to convert number to words.
 
 ## Module Installation
 1. go to module folder, type: `cd numberToWord`
-2. install test framework, type: `npm install`
+2. install grunt and mocha, type: `npm install`
+3. install mocha globally, type: `npm install -g mocha`
 3. at this point module is ready to test, test file located in /test, to test type: `mocha`
 
 ## Web installation
