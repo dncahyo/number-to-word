@@ -24,7 +24,7 @@ function convert(input, config){
     });
 
     triEach.forEach(function(el,idx){
-        var notFirst = el ? el + ", " : "";
+        var notFirst = el ? el + "," : "";
         output = idx ? notFirst + output : el;
     });
 

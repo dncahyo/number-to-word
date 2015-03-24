@@ -17,9 +17,19 @@ describe('english', function () {
 	    };	
   	});
 	
-    it('should return one hundred eleven', function () {
-    	var output = numToWord.convert(111,config);
+    it('should convert: 111 -> one hundred eleven', function () {
+    	var output = numToWord.convert('111',config);
         assert.equal(output, 'one hundred eleven');
+    });
+
+    it('should convert: 1234567 -> one million, two hundred thirty four thousand, five hundred sixty seven', function () {
+    	var output = numToWord.convert('1234567',config);
+        assert.equal(output, 'one million, two hundred thirty four thousand, five hundred sixty seven');
+    });
+
+    it('should convert: 1000007 -> one million, seven', function () {
+    	var output = numToWord.convert('1000007',config);
+        assert.equal(output, 'one million, seven');
     });
 });
 
@@ -39,7 +49,7 @@ describe('indonesian', function () {
 	    };	
   	});
 	
-    it('should return lima ratus sebelas', function () {
+    it('should convert: 551 -> lima ratus sebelas', function () {
     	var output = numToWord.convert(511,config);
         assert.equal(output, 'lima ratus sebelas');
     });
