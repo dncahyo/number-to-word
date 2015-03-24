@@ -9,7 +9,8 @@ var level2 = {
   };
 var config = {
     level2: level2,
-    level3: level3
+    level3: level3,
+    zero: "zero"
   };
 
 rl.setPrompt('input number> ');
