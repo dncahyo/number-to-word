@@ -10,12 +10,12 @@ A node module to convert number to words.
 3. at this point module is ready to test, test file located in /test, to test type: `mocha`
 
 ## Web installation
-Theres also Web app showing this module in action.
-1. go to web folder, type: `cd web`
-2. install modules, type `npm install`
-3. Start the server: `node server.js`
-4. View in browser at `http://localhost:3000`
+Theres also Web app showing this module in action. 
+1. go to web folder, type: `cd web` 
+2. install modules, type `npm install` 
+3. Start the server: `node server.js` 
+4. View in browser at `http://localhost:3000` 
 
 ## CLI 
-For KISS way to test the module theres cli available too!
+For KISS way to test the module, there is cli available too! 
 1. just type: `node cli.js`

@@ -20,12 +20,12 @@
 </head>
 <body ng-controller="mainController">
 	<div class="container">
-		<form name="aForm" class="form-inline">
+		<form name="aForm" class="form-inline" novalidate>
 		  <div class="form-group">
 		    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 		    <div class="input-group">
 		      <div class="input-group-addon">{{langview}}</div>
-		      <input type="number" name="input" class="form-control" id="exampleInputAmount" placeholder="Amount" min="0" ng-model="input">
+		      <input type="number" name="input" class="form-control" id="exampleInputAmount" placeholder="Amount" min="0" ng-model="input" required>
 		      <div class="input-group-addon" ng-click="centInput = centInput ? false : true">
 		      	<span ng-hide="centInput">.{{cent}}</span>
 		      	<input ng-show="centInput" type="number" name="input" ng-model="cent"
@@ -33,7 +33,7 @@
 		      </div>
 		    </div>
 		  </div>
-		  <button type="submit" class="btn btn-primary" ng-click="submit(input,cent)" disable="!aForm.input.$valid">wordify</button>
+		  <button type="submit" class="btn btn-primary" ng-click="submit(input,cent)" disable="!aForm.$valid">wordify</button>
 		  <button type="submit" class="btn btn-default" ng-click="changelang()">change lang</button>
 		</form>
 		<blockquote  ng-if="result">

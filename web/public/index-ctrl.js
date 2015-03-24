@@ -4,7 +4,7 @@ App.controller('mainController', function($scope, $http) {
 	var lang = "english";
 
 	$scope.langview = "$";
-	$scope.cent = "45";
+	$scope.cent = 45;
 	$scope.and = "and ";
 	$scope.centview = " cent";
 	
@@ -28,8 +28,8 @@ App.controller('mainController', function($scope, $http) {
 	}
 
 	function submit(amount,change) {
-		var num = amount.toString();
-		var cent = change.toString();
+		var num = amount ? amount.toString(): "0";
+		var cent = change ? change.toString(): "0";
 		console.log(num);
 		console.log(cent);
 		var	data = {
